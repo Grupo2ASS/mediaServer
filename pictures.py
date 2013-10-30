@@ -22,5 +22,5 @@ for url in urls:
 			os.makedirs(pathname)
 	#if picture (path[-1]) doesn't exist, download 
 		#curl url to path
-	if !os.path.exists(pathname + path[-1]):
+	if not os.path.exists(pathname + path[-1]):
 		os.system('curl -o '+pathname+path[-1]+' '+url)
