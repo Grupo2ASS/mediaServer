@@ -19,8 +19,7 @@ for url in urls:
 		#if folder doesn't exist create
 		pathname += i
 		if not os.path.exists(pathname):
-    		os.makedirs(pathname)
-
+			os.makedirs(pathname)
 	#if picture (path[-1]) doesn't exist, download 
 		#curl url to path
 	if !os.path.exists(pathname + path[-1]):
