@@ -1,7 +1,7 @@
 #!/usr/bin/python
 from BaseHTTPServer import BaseHTTPRequestHandler,HTTPServer
 
-PORT_NUMBER =20 
+PORT_NUMBER =80 
 
 #This class will handles any incoming request from
 #the browser 
