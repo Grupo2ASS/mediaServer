@@ -15,26 +15,18 @@
     var image_url = url_parts.query['image_url'];
     var path = image_url.split('/').splice(3);
     var pathname = "../";
-    _.each(path,function(elem, index){
-	index != path.length-1 ? pathname += elem + '/': pathname += elem;
-	
-	if(!(fs.existsSync(pathname))){
-		if(index == path.length-1){
-			child = exec('curl -o '+pathname+path[path.length-1]+' '+image_url, function (error, stdout, stderr) {
-				sys.print('stdout: ' + stdout);
-				sys.print('stderr: ' + stderr);
-				console.log("downloaded file " + pathname+path[path.length-1]);
-				if (error !== null) {
-					console.log('exec error: ' + error);
-				}
-   			 });
+    mkdirp(pathname + path.slice(0,path.length-1));
+    if(!(fs.existsSync(pathname+path))){
+	child = exec('curl -o '+pathname+path[path.length-1]+' '+image_url, function (error, stdout, stderr) {
+	sys.print('stdout: ' + stdout);
+	sys.print('stderr: ' + stderr);
+	console.log("downloaded file " + pathname+path[path.length-1]);
+	if (error !== null) {
+		console.log('exec error: ' + error);
+	}
+   	 });
 		}
-		else{
-		fs.mkdirSync(pathname);
-	}
-	}
 
-    });
     }
    catch(e){
 	 console.log(e);
