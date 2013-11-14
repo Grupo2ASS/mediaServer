@@ -4,7 +4,8 @@
 	"description": "ERROR: No README data found!",
 	"main": "nodeUrlReceiver.js",
 	"dependencies": {
-		"underscore": "*"
+		"underscore": "*",
+		"mkdirp": "*"
 	},
 	"devDependencies": {},
 	"scripts": {
