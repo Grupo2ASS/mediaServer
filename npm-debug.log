@@ -1,0 +1,36 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/bin/npm', 'install' ]
+info using npm@1.1.4
+info using node@v0.6.12
+verbose config file /home/grupo2/.npmrc
+verbose config file /usr/etc/npmrc
+verbose config file /usr/share/npm/npmrc
+verbose caching /home/grupo2/mediaServer/package.json
+verbose loadDefaults urlReceiver@0.0.0
+verbose readDependencies: using package.json deps
+verbose where, deps [ '/home/grupo2/mediaServer',
+verbose where, deps   [ 'underscore', 'devDependencies' ] ]
+ERR! TypeError: Object #<Object> has no method 'replace'
+ERR!     at /usr/share/npm/lib/install.js:131:41
+ERR!     at Array.map (native)
+ERR!     at /usr/share/npm/lib/install.js:129:29
+ERR!     at /usr/share/npm/lib/install.js:199:16
+ERR!     at [object Object].<anonymous> (fs.js:88:5)
+ERR!     at [object Object].emit (events.js:67:17)
+ERR!     at fs.js:1064:12
+ERR!     at /usr/lib/nodejs/graceful-fs.js:55:5
+ERR!     at Object.oncomplete (/usr/lib/nodejs/graceful-fs.js:67:5)
+ERR! You may report this log at:
+ERR!     <http://bugs.debian.org/npm>
+ERR! or use
+ERR!     reportbug --attach /home/grupo2/mediaServer/npm-debug.log npm
+ERR! 
+ERR! System Linux 3.8.0-32-generic
+ERR! command "node" "/usr/bin/npm" "install"
+ERR! cwd /home/grupo2/mediaServer
+ERR! node -v v0.6.12
+ERR! npm -v 1.1.4
+ERR! type undefined_method
+ERR! arguments [ 'replace', {} ]
+ERR! message Object #<Object> has no method 'replace'
+verbose exit [ 1, true ]

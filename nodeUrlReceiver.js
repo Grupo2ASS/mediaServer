@@ -8,6 +8,9 @@
   http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
     var url_parts = url.parse(req.url, true);
+    console.log(url_parts);
+    console.log(url_parts.query);
+    try{
     var image_url = url_parts.query['image_url'];
 /*What was on original script
  path = url.split('/')[3:]
@@ -41,8 +44,11 @@
 		console.log('exec error: ' + error);
 	}
     });
-    
+    }
+   catch(e){
+	 console.log(e);
+   } 
     console.log(path);
     
     res.end("holi");
-  }).listen(8000);
+  }).listen(3000);

@@ -1,0 +1,15 @@
+{
+	"name": "urlReceiver",
+	"version": "0.0.0",
+	"description": "ERROR: No README data found!",
+	"main": "nodeUrlReceiver.js",
+	"dependencies": {
+		"underscore": "~1.5.2",
+		"devDependencies": {}
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Eduardo Ramírez",
+	"license": "BSD-2-Clause"
+}
