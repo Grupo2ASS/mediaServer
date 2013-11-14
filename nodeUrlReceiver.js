@@ -16,11 +16,12 @@
     var path = image_url.split('/').splice(3);
     var pathname = "../";
     mkdirp(pathname + path.slice(0,path.length-1).join('/'));
+    console.log("made directory : " + pathname + path.slice(0,path.length-1).join('/'));
     if(!(fs.existsSync(pathname+path.join('/')))){
-	child = exec('curl -o '+pathname+'/'+path[path.length-1]+' '+image_url, function (error, stdout, stderr) {
+	child = exec('curl -o '+pathname+path.join('/')+' '+image_url, function (error, stdout, stderr) {
 	sys.print('stdout: ' + stdout);
 	sys.print('stderr: ' + stderr);
-	console.log("downloaded file " + pathname+path[path.length-1]);
+	console.log("downloaded file " + pathname+path.join('/'));
 	if (error !== null) {
 		console.log('exec error: ' + error);
 	}
